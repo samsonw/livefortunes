@@ -1,0 +1,14 @@
+## Synopsis
+Live Web Fortunes!
+
+## Install on your local machine
+Install [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/).
+
+Check out the source code, install all the dependencies and start the server:
+
+    $ git clone git://github.com/samsonw/livefortunes.git
+    $ cd livefortunes
+    $ npm install
+    $ node server.js
+
+Open http://localhost:8000/ in your browser. Enjoy!
