@@ -65,10 +65,14 @@ body {
 }
 
 #hint {
-  width: 50%;
+  width: 55%;
   margin: 0;
   color: #888;
   font-family: 'Myriad Pro',Corbel,'Lucida Grande',Verdana,sans-serif;
   font-size: 0.9em;
   float: left;
+}
+
+#time_left {
+  color: #C27F7F;
 }
