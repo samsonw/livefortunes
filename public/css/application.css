@@ -6,10 +6,24 @@ body {
 body {
   background-color: #232323;
   color: #EEEEEE;
-  font: 14px/1.5 Monospace,'Courier New','Lucida Grande',Verdana,sans-serif;
-  overflow: hidden;
+  font: 14px/1.5 'Myriad Pro',Corbel,'Lucida Grande',Verdana,sans-serif;
   margin: 0;
   padding: 0;
+}
+
+a, a:link, a:visited {
+  color: #C8E6EA;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FCBE57;
+  text-decoration: none;
+}
+
+a:active {
+  color: #C8E6EA;
+  text-decoration: none;
 }
 
 #container {
@@ -18,6 +32,7 @@ body {
 }
 
 #fortune {
+  font: 14px/1.5 Monospace,'Courier New','Lucida Grande',Verdana,sans-serif;
   border: 2px solid #5B5B5B;
   min-height: 250px;
   padding: 20px;
@@ -75,4 +90,12 @@ body {
 
 #time_left {
   color: #C27F7F;
+}
+
+#action_bar {
+  margin: 20px 0;
+  padding: 0 0 15px;
+  overflow: auto;
+  width: 100%;
+  border-bottom: 1px solid #5B5B5B;
 }

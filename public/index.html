@@ -8,10 +8,29 @@
 <body>
   <div id="container">
     <pre id="fortune"></pre>
-    <p id="hint">Hint: Server will push new one automatically every 2 mins. &nbsp;(<span id="time_left">?</span> sec left)  <a class="push button">Push now</a> and give everyone else a surpise! </p><a class="refresh button">Not Interesting. &nbsp;Change one Please.</a>
+    <div id="action_bar">
+      <p id="hint">Hint: Server will push new one automatically every 2 mins. &nbsp;(<span id="time_left">?</span> sec left)  <a class="push button">Push now</a> and give everyone else a surpise! </p><a class="refresh button">Not Interesting. &nbsp;Change one Please.</a>
+    </div>
+    <div id="disqus_thread"></div>
   </div>
   <script type="text/javascript" src="/faye.js"></script>
   <script type="text/javascript" src="/js/jquery.js"></script>
   <script type="text/javascript" src="/js/jquery.livefortunes.js"></script>
+  <script type="text/javascript">
+      var disqus_shortname = 'livefortunes'; // required: replace example with your forum shortname
+      // var disqus_developer = 1;
+
+      // The following are highly recommended additional parameters. Remove the slashes in front to use.
+      var disqus_identifier = 'livefortunes';
+      var disqus_url = 'http://fortune.crash4.us';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
