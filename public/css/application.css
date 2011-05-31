@@ -29,6 +29,7 @@ a:active {
 #container {
   width: 720px;
   margin: 20px auto;
+  padding-bottom: 5px;
 }
 
 #fortune {
