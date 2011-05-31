@@ -4,6 +4,13 @@ Live Web Fortunes!
 ## Install on your local machine
 Install [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/).
 
+Install [fortune](http://en.wikipedia.org/wiki/Fortune_%28Unix%29):
+
+    # debian, ubuntu
+    $ aptitude install fortunes
+    # mac os x
+    $ port install fortune
+
 Check out the source code, install all the dependencies and start the server:
 
     $ git clone git://github.com/samsonw/livefortunes.git
