@@ -1,5 +1,4 @@
 OAuth = require('oauth').OAuth
-exec  = require('child_process').exec
 
 class Publisher
   constructor: (options) ->
@@ -14,9 +13,16 @@ class Publisher
       authorizeCallback:  options.authorizeCallback ? null
       signatureMethod:    options.signatureMethod ? "HMAC-SHA1"
       publishURL:         options.publishURL
+      generator:          options.generator
     
+    @init_generator_listener()
     @init_oauth_client()
   
+  init_generator_listener: ->
+    self = @
+    @settings.generator.on 'new', (message) ->
+      self.publish message
+
   init_oauth_client: ->
     # console.log @settings
     @client = new OAuth @settings.requestURL
@@ -39,20 +45,5 @@ class Publisher
                     else
                       console.log data
                       console.log "PUBLISHED: #{message}"
-    
-  publish_fortune: ->
-    self = @
-    exec  '/usr/bin/env fortune',
-          (error, stdout, stderr) ->
-            console.log "stderr: #{stderr}" if stderr? && stderr isnt ''
-            console.log "exec error: #{error}" if error?
-            console.log stdout
-            fortune = "[Live Fortunes] #{stdout.trim().replace(/\s/g, ' ')}"
-            if fortune.length <= 140
-              self.publish fortune
-            else
-              # try again
-              console.log "> 140 chars, try again..."
-              self.publish_fortune()
 
 module.exports = Publisher
