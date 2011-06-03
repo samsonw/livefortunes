@@ -11,5 +11,6 @@
   , "dependencies": {
       "express": ">= 2.3.10"
     , "faye": ">= 0.6.0"
+    , "oauth": ">= 0.9.0"
   }
 }
