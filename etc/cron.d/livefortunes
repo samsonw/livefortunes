@@ -1,0 +1,3 @@
+PATH=$PATH:/usr/games
+
+9 9,21 * * * samson cd /home/samson/code/livefortunes && ./publish.coffee 2>&1 >> log/publish.log
