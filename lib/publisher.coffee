@@ -19,9 +19,8 @@ class Publisher
     @init_oauth_client()
   
   init_generator_listener: ->
-    self = @
-    @settings.generator.on 'new', (message) ->
-      self.publish message
+    @settings.generator.on 'new', (message) =>
+      @publish message
 
   init_oauth_client: ->
     # console.log @settings
