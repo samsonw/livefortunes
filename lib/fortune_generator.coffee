@@ -10,9 +10,10 @@ class FortuneGenerator extends EventEmitter
           (error, stdout, stderr) =>
             console.log "stderr: #{stderr}" if stderr? && stderr isnt ''
             console.log "exec error: #{error}" if error?
+            stdout = stdout.replace(/\[3\dm/g, '').replace(/\[m/g, '')
             console.log stdout
             return @emit 'new', stdout if @mode is 'web'
-            fortune = "[Live Fortunes] #{stdout.trim().replace(/\^\[\[3\dm/g, '').replace(/\^\[\[m/, '').replace(/\s/g, ' ')}"
+            fortune = "[Live Fortunes] #{stdout.trim().replace(/\s/g, ' ')}"
             if fortune.length <= 140
               @emit 'new', fortune
             else
